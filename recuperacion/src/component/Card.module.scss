@@ -1,0 +1,42 @@
+$radius: 10px;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #0b5ed7;
+  border-radius: $radius;
+  margin-bottom: 15px;
+
+  .img {
+    border-radius: $radius $radius 0 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .content {
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+    flex-grow: 1; /* Hace que el contenido ocupe todo el espacio disponible en la tarjeta */
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido se organice verticalmente */
+  }
+
+  .fs18 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .fwBold {
+    font-weight: bold;
+  }
+  
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
